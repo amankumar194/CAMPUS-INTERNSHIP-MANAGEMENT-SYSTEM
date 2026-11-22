@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DaksaNet | Internship Management</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">DaksaNet<span>.</span></a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#internships">Internships</a>
+                <a href="#apply">Apply</a>
+                <a href="#applications">Applications</a>
+                <a href="#progress">Progress</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Home -->
+        <section id="home" class="hero">
+            <div class="container">
+                <p class="eyebrow">CAMPUS INTERNSHIP MANAGEMENT SYSTEM</p>
+
+                <h1>Manage your internship journey in one place.</h1>
+
+                <p class="hero-description">
+                    Explore opportunities, submit applications and
+                    track your internship progress through DaksaNet.
+                </p>
+
+                <a href="#internships" class="btn">Explore Internships</a>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="container overview">
+            <div class="overview-card">
+                <h2 id="totalInternships">4</h2>
+                <p>Available Internships</p>
+            </div>
+
+            <div class="overview-card">
+                <h2 id="totalApplications">0</h2>
+                <p>Applications Submitted</p>
+            </div>
+
+            <div class="overview-card">
+                <h2 id="approvedApplications">0</h2>
+                <p>Approved Applications</p>
+            </div>
+        </section>
+
+        <!-- Internship Listings -->
+        <section id="internships" class="container section">
+
+            <div class="section-heading">
+                <p class="eyebrow">OPPORTUNITIES</p>
+                <h2>Available Internships</h2>
+                <p>Explore opportunities offered by different companies.</p>
+            </div>
+
+            <div class="internship-grid">
+
+                <article class="internship-card">
+                    <span class="category">Technology</span>
+                    <h3>Web Development Intern</h3>
+                    <p class="company">TechNova Solutions</p>
+                    <p>Work on website development using HTML, CSS and JavaScript.</p>
+                    <div class="details">
+                        <span>Remote</span>
+                        <span>3 Months</span>
+                    </div>
+                    <a href="#apply" class="btn apply-link"
+                       data-internship="Web Development Intern">
+                        Apply Now
+                    </a>
+                </article>
+
+                <article class="internship-card">
+                    <span class="category">Technology</span>
+                    <h3>Python Developer Intern</h3>
+                    <p class="company">CodeCraft Technologies</p>
+                    <p>Assist in developing Python applications and automation tools.</p>
+                    <div class="details">
+                        <span>Hybrid</span>
+                        <span>6 Months</span>
+                    </div>
+                    <a href="#apply" class="btn apply-link"
+                       data-internship="Python Developer Intern">
+                        Apply Now
+                    </a>
+                </article>
+
+                <article class="internship-card">
+                    <span class="category">Design</span>
+                    <h3>UI/UX Design Intern</h3>
+                    <p class="company">PixelWorks Studio</p>
+                    <p>Help create user-friendly interfaces and design prototypes.</p>
+                    <div class="details">
+                        <span>Remote</span>
+                        <span>3 Months</span>
+                    </div>
+                    <a href="#apply" class="btn apply-link"
+                       data-internship="UI/UX Design Intern">
+                        Apply Now
+                    </a>
+                </article>
+
+                <article class="internship-card">
+                    <span class="category">Business</span>
+                    <h3>Business Analyst Intern</h3>
+                    <p class="company">InsightLabs</p>
+                    <p>Analyze information and prepare business reports.</p>
+                    <div class="details">
+                        <span>On-site</span>
+                        <span>4 Months</span>
+                    </div>
+                    <a href="#apply" class="btn apply-link"
+                       data-internship="Business Analyst Intern">
+                        Apply Now
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Application Form -->
+        <section id="apply" class="section form-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">STUDENT APPLICATION</p>
+                    <h2>Apply for an Internship</h2>
+                    <p>Enter your details to submit an application.</p>
+                </div>
+
+                <form id="applicationForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="studentName">Full Name</label>
+                            <input type="text" id="studentName"
+                                   placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentEmail">Email Address</label>
+                            <input type="email" id="studentEmail"
+                                   placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentCourse">Course / Branch</label>
+                            <input type="text" id="studentCourse"
+                                   placeholder="e.g. B.Tech CSE" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="internshipChoice">Select Internship</label>
+                            <select id="internshipChoice" required>
+                                <option value="">Choose an opportunity</option>
+                                <option value="Web Development Intern">
+                                    Web Development Intern
+                                </option>
+                                <option value="Python Developer Intern">
+                                    Python Developer Intern
+                                </option>
+                                <option value="UI/UX Design Intern">
+                                    UI/UX Design Intern
+                                </option>
+                                <option value="Business Analyst Intern">
+                                    Business Analyst Intern
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="resume">Resume (Optional)</label>
+                            <input type="file" id="resume"
+                                   accept=".pdf,.doc,.docx">
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Submit Application
+                    </button>
+
+                    <p id="formMessage" class="message" role="status"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Applications -->
+        <section id="applications" class="container section">
+
+            <div class="section-heading">
+                <p class="eyebrow">APPLICATION RECORDS</p>
+                <h2>Application Management</h2>
+                <p>View submitted applications and their current status.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Internship</th>
+                            <th>Application Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationTable">
+                        <tr id="emptyRow">
+                            <td colspan="4">No applications submitted yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="table-note">
+                For demonstration, the application status can be
+                updated to simulate faculty approval.
+            </p>
+
+        </section>
+
+        <!-- Progress -->
+        <section id="progress" class="section form-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">INTERNSHIP TRACKING</p>
+                    <h2>Internship Progress</h2>
+                    <p>Track the important stages of an internship.</p>
+                </div>
+
+                <div class="progress-list">
+
+                    <div class="progress-item">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3>Application Submission</h3>
+                            <p>Student submits an internship application.</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3>Faculty Approval</h3>
+                            <p>Application is reviewed and approved.</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3>Internship Completion</h3>
+                            <p>Student completes the assigned internship.</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span class="step-number">04</span>
+                        <div>
+                            <h3>Final Evaluation</h3>
+                            <p>Completion documents and final evaluation are recorded.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="report-box">
+                    <h3>Application Summary</h3>
+                    <p>Total Applications: <strong id="reportTotal">0</strong></p>
+                    <p>Approved: <strong id="reportApproved">0</strong></p>
+                    <p>Pending: <strong id="reportPending">0</strong></p>
+                    <p>Rejected: <strong id="reportRejected">0</strong></p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#home" class="logo">DaksaNet<span>.</span></a>
+            <p>Campus Internship Management System</p>
+            <p>Internet Programming Project · 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
